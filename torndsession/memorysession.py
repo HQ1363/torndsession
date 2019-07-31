@@ -70,8 +70,12 @@ class MemorySession(SessionDriver):
             del self._data_handler[session_id]
 
     def remove_expires(self):
+        remove_keys = []
         for key, val in iteritems(self._data_handler):
             now = datetime.utcnow()
             expires = val.get("__expires__", now)
             if now >= expires:
                 del self._data_handler[key]
+                remove_keys.append(key)
+        for key in remove_keys:
+            del self._data_handler[key]

@@ -42,10 +42,10 @@ setup(
     keywords='torndsession tornado session redis memcached memory file python',
     author="MitchellChu",
     author_email="zxdjsj@126.com",
-    url="http://github.com/mitchellchu/torndsession",
+    url="https://github.com/HQ1363/torndsession",
     license="MIT",
     packages=["torndsession"],
     include_package_data=True,
     zip_safe=True,
-    install_requires=['tornado',],
+    install_requires=['tornado', ],
 )
